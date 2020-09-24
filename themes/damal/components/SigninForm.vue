@@ -31,7 +31,7 @@ export default {
             next_page: "/signup",
             onSubmit: (e) => {
                 console.log("Submitting...");
-                console.log(inputs.email, inputs.password);
+                // Call api
             },
         };
     },
