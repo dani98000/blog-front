@@ -22,10 +22,12 @@ export default {
         type: String,
         name: String,
         label: String,
+        validators: Array,
     },
     setup(props, {
         emit
     }) {
+        console.log("validaoters:", props.validators);
         const {
             input,
             errors
