@@ -1,7 +1,7 @@
 <template>
 <div class="box">
     <h2>{{ title }}</h2>
-    <form v-on:submit.prevent="onSubmit">
+    <form v-on:submit.prevent="$emit('submit')">
         <ul class="form-inputs">
             <slot></slot>
         </ul>
@@ -22,7 +22,6 @@ export default {
     },
     props: {
         inputs: Array,
-        onSubmit: Function,
         title: String,
         buttonTitle: String,
         message: String,

@@ -1,5 +1,5 @@
 <template>
-<Form buttonTitle="Sign up" nextPage="/signin" v-bind:onSubmit="onSubmit" message="Already have an account? Sign In" title="Sign up">
+<Form buttonTitle="Sign up" nextPage="/signin" @submit="onSubmit" message="Already have an account? Sign In" title="Sign up">
     <FormInput v-model="inputs.name" label="Display name" name="name" type="text" />
     <FormInput v-model="inputs.email" label="Email" name="email" type="text" v-bind:validators="validators.email" />
     <FormInput v-model="inputs.password" label="Password" name="password" type="password" />
