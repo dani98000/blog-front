@@ -1,5 +1,5 @@
 <template>
-<Form v-bind:button_title="button_title" v-bind:next_page="next_page" v-bind:onSubmit="onSubmit" v-bind:message="message" v-bind:title="title">
+<Form button_title="Sign in" next_page="/signup" v-bind:onSubmit="onSubmit" message="Don't have an account yet? Sign Up" title="Sign in">
     <FormInput v-model="inputs.email" label="Email" name="email" type="text" v-bind:validators="validators.email" />
     <FormInput v-model="inputs.password" label="Password" name="password" type="password" />
 </Form>
@@ -31,10 +31,6 @@ export default {
             validators: {
                 email: [isEmail()],
             },
-            message: "Don't have an account yet? Sign Up",
-            title: "Sign in",
-            button_title: "Sign in",
-            next_page: "/signup",
             onSubmit: (e) => {
                 console.log("Submitting...");
                 // Call api

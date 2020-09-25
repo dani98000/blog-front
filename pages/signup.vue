@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import SignupForm from "../../.current_theme/components/SignupForm";
+import SignupForm from "../.current_theme/components/SignupForm";
 export default {
     components: {
         SignupForm,

@@ -1,10 +1,8 @@
 <template>
-<div class="app">
+<div class>
     <Header />
-    <div class="content">
-        <nuxt />
-        <Footer />
-    </div>
+    <nuxt />
+    <Footer />
     <div id="fb-root"></div>
 </div>
 </template>
@@ -53,19 +51,6 @@ a {
 
 a:hover {
     text-decoration: underline;
-}
-
-.app {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
-
-.content {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    justify-content: space-between;
 }
 
 @media all and (min-width: 500px) {
