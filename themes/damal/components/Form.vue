@@ -31,6 +31,19 @@ export default {
 </script>
 
 <style scoped>
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    font-family: sans-serif;
+}
+
 ul {
     list-style-type: none;
 }
