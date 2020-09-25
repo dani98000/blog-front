@@ -1,12 +1,12 @@
 <template>
-<SignupForm />
+<SignUp />
 </template>
 
 <script>
-import SignupForm from "../.current_theme/components/SignupForm";
+import SignUp from "../.current_theme/components/SignUp";
 export default {
     components: {
-        SignupForm,
+        SignUp,
     },
 };
 </script>

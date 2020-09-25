@@ -1,6 +1,6 @@
 <template>
 <Form buttonTitle="Sign in" nextPage="/signup" @submit="onSubmit" message="Don't have an account yet? Sign Up" title="Sign in">
-    <FormInput v-model="inputs.email" label="Email" name="email" type="text" v-bind:validators="validators.email" />
+    <FormInput v-model="inputs.email" label="Email" name="email" type="text" :validators="validators.email" />
     <FormInput v-model="inputs.password" label="Password" name="password" type="password" />
 </Form>
 </template>

@@ -1,13 +1,13 @@
 <template>
 <div class="box">
     <h2>{{ title }}</h2>
-    <form v-on:submit.prevent="$emit('submit')">
+    <form @submit.prevent="$emit('submit')">
         <ul class="form-inputs">
             <slot></slot>
         </ul>
         <div class="bottom">
-            <input type="submit" v-bind:value="buttonTitle" />
-            <a v-bind:href="nextPage">{{ message }}</a>
+            <button class="btn" type="submit">{{ buttonTitle }}</button>
+            <a :href="nextPage">{{ message }}</a>
         </div>
     </form>
 </div>
@@ -30,22 +30,7 @@ export default {
 };
 </script>
 
-<style>
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-</style>
-
 <style scoped>
-body {
-    margin: 0;
-    padding: 0;
-    background-size: cover;
-    font-family: sans-serif;
-}
-
 ul {
     list-style-type: none;
 }
@@ -70,7 +55,7 @@ ul {
     margin: 25px 0;
 }
 
-.box input[type="submit"] {
+.box .btn {
     margin-right: 1.76rem;
     margin-bottom: 2rem;
     border: none;
@@ -85,7 +70,7 @@ ul {
     letter-spacing: 1px;
 }
 
-.box input[type="submit"]:hover {
+.box .btn:hover {
     background-color: #42b983;
     box-shadow: 0 1px 1px 0 rgba(66, 185, 131, 0.45),
         0 1px 3px 1px rgba(66, 185, 131, 0.3);

@@ -1,6 +1,6 @@
 <template>
 <div class="input-box">
-    <input v-bind:type="type" v-bind:name="name" required v-model="input" />
+    <input :type="type" :name="name" required v-model="input" />
     <label>{{ label }}</label>
     <ErrorDisplay v-if="input" :errors="errors" />
 </div>
@@ -43,7 +43,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 * {
     padding: 0;
     margin: 0;
@@ -100,25 +100,5 @@ body {
 .input-box input:focus {
     outline: none;
     border: 2px solid #42b983;
-}
-
-input[type="submit"] {
-    margin-right: 1.76rem;
-    margin-bottom: 2rem;
-    border: none;
-    outline: none;
-    color: #fff;
-    background-color: #42b983;
-    padding: 0.625rem 1.25rem;
-    cursor: pointer;
-    border-radius: 0.312rem;
-    font-size: 1rem;
-    float: right;
-}
-
-input[type="submit"]:hover {
-    background-color: #42b983;
-    box-shadow: 0 1px 1px 0 rgba(66, 185, 131, 0.45),
-        0 1px 3px 1px rgba(66, 185, 131, 0.3);
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
 <Form buttonTitle="Sign up" nextPage="/signin" @submit="onSubmit" message="Already have an account? Sign In" title="Sign up">
     <FormInput v-model="inputs.name" label="Display name" name="name" type="text" />
-    <FormInput v-model="inputs.email" label="Email" name="email" type="text" v-bind:validators="validators.email" />
+    <FormInput v-model="inputs.email" label="Email" name="email" type="text" :validators="validators.email" />
     <FormInput v-model="inputs.password" label="Password" name="password" type="password" />
     <FormInput v-model="inputs.confirmPassword" label="Confirm password" name="confirmPassword" type="password" />
 </Form>

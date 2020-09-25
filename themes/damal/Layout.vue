@@ -59,17 +59,9 @@ a:hover {
     flex-direction: column;
 }
 
-@media all and (min-width: 500px) {
-    .app {
-        margin: 0 auto;
-        width: 100%;
-    }
-}
-
-@media all and (min-width: 1200px) {
-    .app {
-        margin: 0 auto;
-        width: 95%;
+@media all and (max-width: 500px) {
+    .container {
+        margin: 0.5rem;
     }
 }
 
