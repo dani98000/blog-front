@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import SigninForm from "./SigninForm";
+import SigninForm from "./components/SigninForm";
 export default {
     name: "SignIn",
     components: {
