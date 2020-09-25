@@ -1,5 +1,5 @@
 <template>
-<div class="inputBox">
+<div class="input-box">
     <input v-bind:type="type" v-bind:name="name" required v-model="input" />
     <label>{{ label }}</label>
     <ErrorDisplay v-if="input" :errors="errors" />
@@ -27,7 +27,6 @@ export default {
     setup(props, {
         emit
     }) {
-        console.log("validaoters:", props.validators);
         const {
             input,
             errors
@@ -58,13 +57,13 @@ body {
     font-family: sans-serif;
 }
 
-.inputBox {
+.input-box {
     position: relative;
     margin-left: 1.76rem;
     margin-bottom: 1.875rem;
 }
 
-.inputBox input {
+.input-box input {
     width: 93%;
     padding: 0.625rem 10px;
     font-size: 1rem;
@@ -74,7 +73,7 @@ body {
     border-radius: 4px;
 }
 
-.inputBox label {
+.input-box label {
     position: absolute;
     top: 0;
     left: 10px;
@@ -85,9 +84,9 @@ body {
     transition: 0.5s;
 }
 
-.inputBox input:focus~label,
-.inputBox input:valid~label,
-.inputBox input:not([value=""])~focus~label {
+.input-box input:focus~label,
+.input-box input:valid~label,
+.input-box input:not([value=""])~focus~label {
     top: -1.125rem;
     left: 10px;
     color: #42b983;
@@ -98,7 +97,7 @@ body {
     padding-right: 5px;
 }
 
-.inputBox input:focus {
+.input-box input:focus {
     outline: none;
     border: 2px solid #42b983;
 }
