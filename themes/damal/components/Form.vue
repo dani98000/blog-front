@@ -36,7 +36,9 @@ export default {
     margin: 0;
     box-sizing: border-box;
 }
+</style>
 
+<style scoped>
 body {
     margin: 0;
     padding: 0;
