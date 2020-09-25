@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="container">
     <Header />
     <nuxt />
     <Footer />
@@ -53,6 +53,12 @@ a:hover {
     text-decoration: underline;
 }
 
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 @media all and (min-width: 500px) {
     .app {
         margin: 0 auto;
@@ -70,7 +76,7 @@ a:hover {
 .row {
     display: flex;
 
-    >* {
+    * {
         flex: 1;
     }
 }
