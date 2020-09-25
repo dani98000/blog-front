@@ -6,8 +6,8 @@
             <slot></slot>
         </ul>
         <div class="bottom">
-            <input type="submit" v-bind:value="button_title" />
-            <a v-bind:href="next_page">{{ message }}</a>
+            <input type="submit" v-bind:value="buttonTitle" />
+            <a v-bind:href="nextPage">{{ message }}</a>
         </div>
     </form>
 </div>
@@ -24,9 +24,9 @@ export default {
         inputs: Array,
         onSubmit: Function,
         title: String,
-        button_title: String,
+        buttonTitle: String,
         message: String,
-        next_page: String,
+        nextPage: String,
     },
 };
 </script>
