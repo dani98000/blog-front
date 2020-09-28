@@ -1,14 +1,16 @@
 <template>
-  <div class="input-box">
-    <input v-bind:type="type" v-bind:name="name" required v-model="input" />
-    <label>{{ label }}</label>
-    <ErrorDisplay v-if="input" :errors="errors" />
-  </div>
+<div class="input-box">
+  <input v-bind:type="type" v-bind:name="name" required v-model="input" />
+  <label>{{ label }}</label>
+  <ErrorDisplay v-if="input" :errors="errors" />
+</div>
 </template>
 
 <script>
 import useInputValidator from "../../../helpers/useInputValidator";
-import { isEmail } from "../../../helpers/validators";
+import {
+  isEmail
+} from "../../../helpers/validators";
 import ErrorDisplay from "./ErrorDisplay";
 
 export default {
@@ -22,8 +24,13 @@ export default {
     label: String,
     validators: Array,
   },
-  setup(props, { emit }) {
-    const { input, errors } = useInputValidator(
+  setup(props, {
+    emit
+  }) {
+    const {
+      input,
+      errors
+    } = useInputValidator(
       props.value,
       props.validators || [],
       (value) => emit("input", value)
@@ -77,9 +84,9 @@ body {
   transition: 0.5s;
 }
 
-.input-box input:focus ~ label,
-.input-box input:valid ~ label,
-.input-box input:not([value=""]) ~ focus ~ label {
+.input-box input:focus~label,
+.input-box input:valid~label,
+.input-box input:not([value=""])~focus~label {
   top: -1.125rem;
   left: 10px;
   color: #42b983;

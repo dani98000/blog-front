@@ -20,11 +20,16 @@
     />
   </Form>
     <FormInput v-model="inputs.email" label="Email" name="email" type="text" v-bind:validators="validators.email" />
+
 <script>
 import FormInput from "./FormInput";
 import Form from "./Form";
-import { reactive } from "@vue/composition-api";
-import { isEmail } from "../../../helpers/validators";
+import {
+  reactive
+} from "@vue/composition-api";
+import {
+  isEmail
+} from "../../../helpers/validators";
 
 export default {
   components: {

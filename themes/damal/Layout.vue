@@ -1,12 +1,12 @@
 <template>
-  <div class="app">
-    <Header />
-    <div class="content">
-      <nuxt />
-      <Footer />
-    </div>
-    <div id="fb-root"></div>
+<div class="app">
+  <Header />
+  <div class="content">
+    <nuxt />
+    <Footer />
   </div>
+  <div id="fb-root"></div>
+</div>
 </template>
 
 <script>
@@ -19,13 +19,10 @@ export default {
     Footer,
   },
   head: {
-    link: [
-      {
-        rel: "stylesheet",
-        href:
-          "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap",
-      },
-    ],
+    link: [{
+      rel: "stylesheet",
+      href: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap",
+    }, ],
   },
 };
 </script>
@@ -81,7 +78,7 @@ a:hover {
 .row {
   display: flex;
 
-  > * {
+  >* {
     flex: 1;
   }
 }
