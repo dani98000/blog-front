@@ -9,8 +9,7 @@
 
 <script>
 import FormInput from "./FormInput";
-import Form from "./Form"; <<
-<< << < HEAD
+import Form from "./Form";
 import {
   ref,
   reactive
@@ -43,41 +42,5 @@ export default {
       },
     };
   },
-  ===
-  === =
-  import {
-    ref,
-    reactive
-  } from "@vue/composition-api";
-  import {
-    isEmail
-  } from "../../../helpers/validators";
-
-  export default {
-    components: {
-      FormInput,
-      Form,
-    },
-    setup() {
-      const inputs = reactive({
-        name: "",
-        email: "",
-        password: "",
-        confirmPassword: "",
-      });
-
-      return {
-        inputs,
-        validators: {
-          email: [isEmail()],
-        },
-        onSubmit: (e) => {
-          console.log("Submitting...");
-          // Call api
-        },
-      };
-    },
-    >>>
-    >>> > 620 b3f60a5ff92b56a43fab9a510f4fb1564e192
-  };
+};
 </script>
