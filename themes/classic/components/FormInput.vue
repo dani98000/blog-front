@@ -1,21 +1,16 @@
 <template>
-  <div class="form-group field">
-    <input
-      v-model="input"
-      :type="type"
-      class="form-field"
-      :placeholder="label"
-      :name="name"
-      required
-    />
-    <label class="form-label">{{ label }}</label>
-    <ErrorDisplay v-if="input" :errors="errors" />
-  </div>
+<div class="form-group field">
+  <input v-model="input" :type="type" class="form-field" :placeholder="label" :name="name" required />
+  <label class="form-label">{{ label }}</label>
+  <ErrorDisplay v-if="input" :errors="errors" />
+</div>
 </template>
 
 <script>
 import useInputValidator from "../../../helpers/useInputValidator";
-import { isEmail } from "../../../helpers/validators";
+import {
+  isEmail
+} from "../../../helpers/validators";
 import ErrorDisplay from "./ErrorDisplay";
 
 export default {
@@ -29,8 +24,13 @@ export default {
     label: String,
     validators: Array,
   },
-  setup(props, { emit }) {
-    const { input, errors } = useInputValidator(
+  setup(props, {
+    emit
+  }) {
+    const {
+      input,
+      errors
+    } = useInputValidator(
       props.value,
       props.validators || [],
       (value) => emit("input", value)
@@ -48,6 +48,7 @@ $black: #111111;
 $primary: #11998e;
 $secondary: #38ef7d;
 $gray: #9b9b9b;
+
 .form-group {
   position: relative;
   padding: 15px 0 0;
@@ -73,7 +74,7 @@ $gray: #9b9b9b;
     color: transparent;
   }
 
-  &:placeholder-shown ~ .form-label {
+  &:placeholder-shown~.form-label {
     font-size: 0.8rem;
     cursor: text;
     top: 20px;
@@ -91,7 +92,7 @@ $gray: #9b9b9b;
 }
 
 .form-field:focus {
-  ~ .form-label {
+  ~.form-label {
     position: absolute;
     top: 0;
     display: block;
@@ -100,13 +101,16 @@ $gray: #9b9b9b;
     color: $primary;
     font-weight: 700;
   }
-  padding-bottom: 6px;
+
+  padding-bottom: 2px;
   border-width: 3px;
   border-image: linear-gradient(to right, $primary, $secondary);
   border-image-slice: 1;
 }
+
 /* reset input */
 .form-field {
+
   &:required,
   &:invalid {
     box-shadow: none;
